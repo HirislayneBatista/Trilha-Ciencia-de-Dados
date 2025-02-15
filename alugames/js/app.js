@@ -2,17 +2,33 @@ function alterarStatus(id){
     let gameClicado = document.getElementById(`game-${id}`);
     let imagem = gameClicado.querySelector(".dashboard__item__img");
     let botao = gameClicado.querySelector(".dashboard__item__button");
+    let nomeJogo = gameClicado.querySelector(".dashboard__item__name");
 
-    // let nomeJogo = gameClicado.querySelector(".dashboard__item__name")
-    // alert(nomeJogo.textContent)
-
-    if(imagem.classList.contains("dashboard__item__img--rented")){
-        imagem.classList.remove("dashboard__item__img--rented");
-        botao.classList.remove("dashboard__item__button--return"); 
-        botao.textContent = "Alugar";
+    if (imagem.classList.contains("dashboard__item__img--rented")){
+        if (confirm(`Você tem certeza que deseja devolver o jogo ${nomeJogo.textContent}?`)) {
+            imagem.classList.remove("dashboard__item__img--rented");
+            botao.classList.remove("dashboard__item__button--return"); 
+            botao.textContent = "Alugar";
+            quantidadeAlugados--;
+        }
     } else {
         imagem.classList.add("dashboard__item__img--rented");
         botao.classList.add("dashboard__item__button--return");
         botao.textContent = "Devolver";
+        quantidadeAlugados++;
     }
+
+    jogosAlugados();
 }
+
+function jogosAlugados() {
+    console.log(`Total de jogos alugados: ${quantidadeAlugados}`);
+}
+
+let quantidadeAlugados = 0;
+
+// Inicializa a contagem considerando que os jogos já começam alugados
+document.addEventListener('DOMContentLoaded', function() {
+    quantidadeAlugados = document.querySelectorAll('.dashboard__item__img--rented').length;
+    jogosAlugados();
+});
