@@ -1,4 +1,5 @@
 function sortear() {
+    // Obter valores de entradas pelo usuario
     let quantidade = parseInt(document.getElementById('quantidade').value);
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
@@ -6,6 +7,20 @@ function sortear() {
     let sorteados = [];
     let numero;
 
+    // Validar inervalos 
+    if (de >= ate) {
+        alert('O Numero inicial está maior que o numero final. Informe novamente.');
+        return;
+    }
+
+    // Validacao entre quantidade e intervalos 
+    let tamanho = ate - de;
+    if ((tamanho + 1) < quantidade) {
+        alert('A quantidade de numeros deve ser menor do que o intervalo informado. Verifique!');
+        return;
+    }
+
+    // Gerar numeros aleatorios 
     for (let i = 0; i < quantidade; i++) {
         numero = obterNumeroAleatorio(de, ate);
 
@@ -13,7 +28,7 @@ function sortear() {
             numero = obterNumeroAleatorio(de, ate);
         }
 
-        sorteados.push(numero);
+        sorteados.push(numero);  // guardar no array de numeros sorteados
     }
     
     let resultado = document.getElementById('resultado');
