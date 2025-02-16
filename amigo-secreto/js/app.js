@@ -16,7 +16,7 @@ function adicionar() {
     }
 }
 
-function atualizarLista(amigo) {
+function atualizarLista() {
     let amigosIncluidos = document.getElementById('lista-amigos');
     amigosIncluidos.innerHTML = '';
 
@@ -32,8 +32,16 @@ function atualizarLista(amigo) {
 }
 
 function sortear() {
+    if (listaAmigos.length < 4){
+        alert('Adicione pelo menos 4 amigos para realização do sorteio!');
+        return;
+    }
+
+    // Chamar funcao para embaralhar lista de amigos 
     embaralhar(listaAmigos);
+
     let sorteio = document.getElementById('lista-sorteio');
+
     for (let i = 0; i < listaAmigos.length; i++) {
         if (i == listaAmigos.length - 1) {
             sorteio.innerHTML = sorteio.innerHTML + listaAmigos[i] +' --> ' +listaAmigos[0] + '<br/>';
