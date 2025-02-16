@@ -3,11 +3,11 @@ let listaAmigos = [];
 
 function adicionar() {
     // recuperar valores dos nomes
-    let amigo = document.getElementById('nome-amigo').value;
+    let amigo = document.getElementById('nome-amigo').value.toUpperCase();
 
     // Validação para adicionar nomes ao array
     if (listaAmigos.includes(amigo)) {
-        alert('Este nome já foi incluído na lista de Amigos. Digite um novo nome.');
+        alert('Nome já adicionado!');
     } else if (amigo == '') {
         alert('O nome do amigo não pode ser vazio.');
     } else {
