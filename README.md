@@ -10,7 +10,7 @@
 <br>
 
 <div>
-<h4>- Autoria: </h4>
+<h4>- Trilheira: </h4>
 
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/186402934?v=4" width=115><br><sub>Hirislayne Batista</sub>](https://github.com/HirislayneBatista) | 
 | :---: |
