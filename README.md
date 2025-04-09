@@ -17,7 +17,7 @@
 
 <h2> Desafios </h2>
 <h3>Desafio 1</h3>
-<p>Algorítmos e Lógica de Programação: https://github.com/HirislayneBatista/Trilha-Ciencia-de-Dados/blob/31167ba1101448bac3180ad50f6121db06134090/Desafio_1.js</p>
+<p>Algoritmos e Lógica de Programação: https://github.com/HirislayneBatista/Trilha-Ciencia-de-Dados/blob/31167ba1101448bac3180ad50f6121db06134090/Desafio_1.js</p>
 
 <h3>Desafio 2</h3>
 <p>Análise de Dados com Google Sheets: https://github.com/HirislayneBatista/Trilha-Ciencia-de-Dados/blob/31167ba1101448bac3180ad50f6121db06134090/Desafio_2/Relatorio%20de%20Analise%20de%20Dados%20-%20Desafio%202.pdf </p>
